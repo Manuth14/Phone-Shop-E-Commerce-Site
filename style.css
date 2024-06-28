@@ -1,0 +1,588 @@
+/* color */
+
+/* background: 000079; blue
+background: FFFC00;  yellow */
+
+/* color */
+
+/* fonts */
+@font-face {
+    font-family: "BriemHand";
+    src: url("fonts/BriemHand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poetsen";
+    src: url("fonts/PoetsenOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Medium.ttf");
+}
+
+* {
+    font-family: "Poppins";
+    font-size: 16px;
+    color: #000079;
+}
+
+/* fonts */
+
+/*** Topbar Start ***/
+.fixed-top {
+    transition: 0.5s;
+    background: var(--bs-white);
+    border: 0;
+}
+
+.topbar {
+    padding: 15px;
+    border-radius: 330px 100px;
+    background: rgb(0, 0, 120);
+}
+
+.topbar-text {
+    color: white;
+}
+
+.topbar-text:hover {
+    color: rgb(255, 252, 0);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.topbar .top-info {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .top-link {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .top-link a {
+    letter-spacing: 1px;
+}
+
+.topbar .top-link a small:hover {
+    color: var(--bs-secondary) !important;
+    transition: 0.5s;
+}
+
+.topbar .top-link a small:hover i {
+    color: var(--bs-primary) !important;
+}
+
+/*** Topbar End ***/
+
+/* Home */
+.carousel-image {
+    background: url("resources/banner/carousel/images.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+}
+
+.more-product-btn {
+    width: 180px;
+    margin-right: 35px;
+    padding: 14px;
+    border: solid 2px #FFFC00;
+    color: #000079;
+    border-radius: 40px;
+    background-color: transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.more-product-btn:hover {
+    box-shadow: inset 200px 0 0 0 #FFFC00;
+    color: #000079;
+    font-weight: bold;
+    transition-duration: 0.8s;
+}
+
+.product-card {
+    box-shadow: 0 1px 5px rgba(0, 0, 121, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.product-card:hover {
+    box-shadow: 0 1px 25px rgba(0, 0, 0, 0.5);
+}
+
+.product-title {
+    font-family: "Poetsen";
+    color: #000079;
+    font-size: 22px;
+}
+
+.product-price {
+    font-family: "BriemHand";
+    font-size: 20px;
+}
+
+.product-image {
+    padding: 20px;
+}
+
+.img {
+    transition: transform .2s;
+}
+
+.img:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.add-cart {
+    opacity: 1;
+    outline: 0;
+    color: #FFFC00;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.add-cart:hover {
+
+    &:after {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+
+    &:before {
+        opacity: 0;
+        transform: translateY(50%) rotateX(90deg);
+    }
+}
+
+.add-cart:after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: #000079;
+    font-family: "BriemHand";
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    background: #FFFC00;
+    border-radius: 20px;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+}
+
+.add-cart:before {
+
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: #000079;
+    display: block;
+    padding: 0 40px;
+    line-height: 40px;
+    transition: 0.5s;
+    position: relative;
+    border: solid 2px rgb(255, 252, 0);
+    border-radius: 20px;
+    background: #ffffff;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+}
+
+/* Home */
+
+/* admin-signin */
+.admin-main-body {
+    background-image: url("b4.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.admin {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 0 5px 25px rgb(0, 0, 0);
+}
+
+/* admin-signin */
+
+.main-head {
+    background: rgb(248, 248, 248);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.482);
+}
+
+.top-head {
+    background: #FFFC00;
+    border-radius: 330px 100px;
+}
+
+.bottom-head {
+    padding: 10px;
+}
+
+
+
+.input-search {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+    background-color: white;
+    padding-right: 40px;
+    color: #000000;
+}
+
+.input-search::placeholder {
+    color: rgba(0, 0, 0, 0.786);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.btn-search {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    color: #000000;
+    background-color: transparent;
+    pointer-events: painted;
+}
+
+.btn-search:focus~.input-search {
+    width: 300px;
+    border-radius: 0px;
+    background-color: white;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.input-search:focus {
+    width: 300px;
+    border-radius: 0px;
+    background-color: white;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+
+/* single-product-view */
+.mainImg {
+    height: 400px;
+    background-image: url("resources/empty.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.single-product-title {
+    font-family: "Poetsen";
+    font-size: 30px;
+}
+
+.single-product-price {
+    font-family: "BriemHand";
+    font-size: 27px;
+}
+
+.cart-btn {
+    width: 150px;
+    padding: 10px;
+    border: solid 2px #FFFC00;
+    color: #000079;
+    border-radius: 40px;
+    background-color: transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.cart-btn:hover {
+    transition-duration: 0.6s;
+    font-family: "Poetsen";
+    box-shadow: inset 0 -3.25em 10px 0 #FFFC00;
+}
+
+.buy-btn {
+    width: 150px;
+    padding: 10px;
+    border: solid 2px #000079;
+    color: #000079;
+    border-radius: 40px;
+    background-color: transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.buy-btn:hover {
+    transition-duration: 0.6s;
+    font-family: "Poetsen";
+    color: white;
+    font-weight: bold;
+    box-shadow: inset 0 3.25em 10px 0 #000079;
+}
+
+.wishlist-btn{
+    cursor: pointer;
+}
+
+.wishlist-btn:hover {
+    color: red;
+    transition-duration: 0.5s;
+    text-decoration: underline;    
+}
+
+.category-link {
+    text-decoration: none;
+    color: #000079;
+    font-family: "BriemHand";
+    font-size: 18px;
+}
+
+.category-link:hover {
+    color: red;
+    font-weight: bold;
+}
+
+/* single-product-view */
+
+/* footer */
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-family: "BriemHand";
+    font-size: 18px;
+}
+
+.footer-link:hover {
+    color: #FFFC00;
+}
+
+/* footer */
+
+/* signin - signup */
+.main-body {
+    background: url("b4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main {
+    width: 1000px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 5px 25px rgb(0, 0, 0);
+}
+
+.input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    padding: 5px 15px;
+    font-family: "Poppins";
+}
+
+.input[type=text] {
+    background-color: white;
+    background-image: url("resources/icon/person.svg");
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    padding: 12px 3px 2px 40px;
+}
+
+@media only screen and (min-width: 600px) {
+    .input[type=text] {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .input[type=text] {
+        width: 49%;
+    }
+}
+
+.input[type=email] {
+    width: 100%;
+    background-color: white;
+    background-image: url("resources/icon/envelope.svg");
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    padding: 12px 3px 2px 40px;
+}
+
+.input[type=password] {
+    background-color: white;
+    background-image: url("resources/icon/lock-fill.svg");
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    padding: 12px 3px 2px 40px;
+}
+
+.input[type=number] {
+    width: 100%;
+    background-color: white;
+    background-image: url("resources/icon/telephone.svg");
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    padding: 12px 3px 2px 40px;
+}
+
+.input:focus {
+    border-bottom: solid #FFFC00 2px;
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+input:focus {
+    border-bottom: 1px solid #222;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #000079;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.register-btn {
+    width: 80%;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #000079;
+    color: #FFFC00;
+    font-family: "Poetsen";
+    border: none;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.register-btn:hover {
+    color: #000079;
+    transition-duration: 0.8s;
+    box-shadow: inset 0 3.40em 10px 0 #FFFC00;
+}
+
+.signin-btn {
+    width: 80%;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #FFFC00;
+    color: #000079;
+    font-family: "Poetsen";
+    border: none;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.signin-btn:hover {
+    transition-duration: 0.8s;
+    box-shadow: inset 0 3.40em 10px 0 #000079;
+    color: #FFFC00;
+}
+
+/* signin - signup */
+
+.coupen {
+    border: none;
+    outline: none;
+}
+
+.topic {
+    font-weight: bold;
+    font-family: "BriemHand";
+    font-size: 55px;
+}
+
+/* account information */
+.account-information-body {
+    background-color: rgb(238, 238, 238);
+}
+
+.settings-btn {
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    padding: 10px;
+}
+
+.user-box {
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.632);
+    padding: 25px;
+}
+
+.photo-btn {
+    background-color: #FFFC00;
+    border-radius: 25px;
+    padding: 10px;
+    font-family: "Poetsen";
+}
+
+.photo-btn:hover {
+    cursor: pointer;
+}
+
+.update-information-btn {
+    border: #000079 2px solid;
+    border-radius: 25px;
+    padding: 11px;
+    font-family: "Poetsen";
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.update-information-btn:hover {
+    transition-duration: 0.9s;
+    background-color: #000079;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* account information */
+
+.invoice {
+    background-color: rgb(239, 239, 239);
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.632);
+    padding: 15px;
+
+}
